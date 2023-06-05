@@ -1,4 +1,9 @@
 #include "lists.h"
+/**
+	* check_cycle - checks if there is a cycle
+	* @list: pointer to the head of the list
+	* Return: returns 1 if its a cycle and 0 if not
+*/
 
 int check_cycle(listint_t *list)
 {
