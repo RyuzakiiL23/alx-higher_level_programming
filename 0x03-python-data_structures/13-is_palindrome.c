@@ -9,40 +9,42 @@
  */
 int is_palindrome(listint_t **head)
 {
-	int count = 0, i = 0, j = 0;
-	listint_t *tmp = *head;
-	listint_t *tail = NULL;
-	listint_t *tmp2 = NULL;
-	listint_t *tail2 = NULL;
+	listint_t *slow = *head;
+	listint_t *fast = *head;
+	listint_t *tmp = NULL;
+	listint_t *second_half = NULL;
 
-	if (*head == NULL)
-		return (0);
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
 
-	while (tmp != NULL)
+
+	/* Find the middle node of the list */
+	while (fast != NULL && fast->next != NULL)
 	{
-		count++;
-		tail = tmp;
-		tmp = tmp->next;
+		fast = fast->next->next;
+		slow = slow->next;
 	}
 
-	if ((*head)->n != tail->n)
-		return (0);
+	/* If the list has an odd number of nodes, skip the middle node */
+	if (fast != NULL)
+		slow = slow->next;
 
-	tmp = *head;
-
-	while (i < (count + 1) / 2)
+	/* Reverse the second half of the list */
+	while (slow != NULL)
 	{
-		tmp2 = tmp;
-		tail2 = tmp;
+		tmp = slow->next;
+		slow->next = second_half;
+		second_half = slow;
+		slow = tmp;
+	}
 
-		for (; j < count - 2 * i - 1; j++)
-			tmp2 = tmp2->next;
-
-		if (tmp2->n != tail2->n)
+	/* Compare the first half with the reversed second half */
+	while (second_half != NULL)
+	{
+		if ((*head)->n != second_half->n)
 			return (0);
-
-		tmp = tmp->next;
-		i++;
+		*head = (*head)->next;
+		second_half = second_half->next;
 	}
 
 	return (1);
