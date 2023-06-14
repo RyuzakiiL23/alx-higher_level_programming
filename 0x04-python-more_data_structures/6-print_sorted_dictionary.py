@@ -5,4 +5,4 @@ def print_sorted_dictionary(a_dictionary):
     for key in sorted_keys:
         print(key, a_dictionary[key])
 
-    return sorted_keys 
+    return sorted_keys
