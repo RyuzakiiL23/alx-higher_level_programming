@@ -61,12 +61,14 @@ class Rectangle:
         for _ in range(self.height):
             rectangle_str += "#" * self.width + "\n"
         return rectangle_str.rstrip()
-
-    def __repr__(self):
-        """Returns string representation of rectangle"""
-        return f"Rectangle({self.width}, {self.height})"
+        
+        def __repr__(self):
+        """Return the string representation of the Rectangle."""
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return (rect)
 
     def __del__(self):
-        """Print a message when an instance of Rectangle is deleted"""
+        """Print a message for every deletion of a Rectangle."""
+        type(self).number_of_instances -= 1
         print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
