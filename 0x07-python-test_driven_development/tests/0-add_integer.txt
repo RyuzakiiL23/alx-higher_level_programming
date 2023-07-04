@@ -1,0 +1,39 @@
+Usage:
+------
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+
+    **** 2 ints ****
+    >>> add_integer(10, 31)
+    41
+
+    **** negative int ****
+    >>> add_integer(2, -10)
+    -8
+
+    **** floats ****
+    >>> add_integer(2.0, 3.0)
+    5
+
+    **** negative floats ****
+    >>> add_integer(-2.9, -9.2)
+    -11
+
+    **** floats and int ****
+    >>> add_integer(2.7, -30)
+    -28
+
+    **** one parametter ****
+    >>> add_integer(12)
+    110
+
+    **** no number ****
+    >>> add_integer("hello", 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    **** no int no float ****
+    >>> add_integer("hello", "there")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
