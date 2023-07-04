@@ -1,6 +1,4 @@
 #!/usr/bin/python3
 def magic_string():
-    iteration = 1
-    while True:
-        yield ", ".join(["BestSchool"] * iteration)
-        iteration += 1
+    magic_string.n = getattr(magic_string, 'n', 0) + 1
+    return ("BestSchool, " * (magic_string.n - 1) + "BestSchool")
