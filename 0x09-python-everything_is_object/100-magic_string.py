@@ -2,5 +2,5 @@
 def magic_string():
     iteration = 1
     while True:
-        yield "BestSchool" * iteration
+        yield ", ".join(["BestSchool"] * iteration)
         iteration += 1
