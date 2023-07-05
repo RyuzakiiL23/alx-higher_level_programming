@@ -1,0 +1,36 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+let's try it:
+
+	>>> text_indentation(25)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+	>>> text_indentation("")
+
+	>>> text_indentation("let's test a text with no punctuationlet's test a text with no punctuationlet's test a text with no punctuationlet's test a text with no punctuationlet's test a text with no punctuationlet's test a text with no punctuationlet's test a text with no punctuationlet's test a text with no punctuationlet's test a text with no punctuation")
+	let's test a text with no punctuationlet's test a text with no punctuationlet's test a text with no punctuationlet's test a text with no punctuationlet's test a text with no punctuationlet's test a text with no punctuationlet's test a text with no punctuationlet's test a text with no punctuationlet's test a text with no punctuation
+
+	>>> text_indentation(".at the beginning?")
+	.
+	<BLANKLINE>
+	at the beginning?
+	<BLANKLINE>
+
+	>>> text_indentation("consecutives...")
+	consecutives.
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+
+
+	>>> text_indentation("     leading whitespace.")
+	leading whitespace.
+	<BLANKLINE>
+
+	>>> text_indentation("trailing whitespaces.      ")
+	trailing whitespaces.
+	<BLANKLINE>

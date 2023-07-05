@@ -1,0 +1,84 @@
+Usage:
+------
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+*** Example: Dividing Matrix by a Divisor ***
+>>> matrix = [
+...     [3, 6, 9],
+...     [12, 15, 18]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+*** Example: Quotients Rounded to 2 Decimal Places ***
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+*** Example: Handling Floating-Point Numbers ***
+>>> matrix = [
+...     [1.1, -2.2, 3.3],
+...     [4.4, 5.5, -6.6]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[0.37, -0.73, 1.1], [1.47, 1.83, -2.2]]
+
+*** Example: Combining Integers and Floats ***
+>>> matrix = [
+...     [1, -2.2, 3, 4.4, 5],
+...     [-6.6, 7.0, 8, 9.999, 10]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[0.33, -0.73, 1.0, 1.47, 1.67], [-2.2, 2.33, 2.67, 3.33, 3.33]]
+
+Invalid Matrices:
+----------------
+*** Example: Non-Matrix Parameter ***
+>>> matrix = "not a list"
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+*** Example: Empty List ***
+>>> matrix = []
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+*** Example: Rows with Different Sizes ***
+>>> matrix = [
+...     [1, 2, 3, 4],
+...     [5, 6, 7]
+... ]
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  ...
+TypeError: Each row of the matrix must have the same size
+
+Invalid Divisors:
+----------------
+*** Example: Non-Number Divisor ***
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+>>> print(matrix_divided(matrix, "not a number"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  ...
+TypeError: div must be a number
+
+*** Example: Divisor is Zero ***
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  ...
+ZeroDivisionError: division by zero
