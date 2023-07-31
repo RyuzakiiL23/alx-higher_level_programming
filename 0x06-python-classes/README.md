@@ -1,16 +1,28 @@
-# Python - :snake: Exceptions :warning:
+# Python - Classes and Objects :snake: :gear:
 
 ## Learning Objectives :heavy_check_mark:
 
 ### General
 - Why Python programming is awesome
-- What’s the difference between errors and exceptions
-- What are exceptions and how to use them
-- When do we need to use exceptions
-- How to correctly handle an exception
-- What’s the purpose of catching exceptions
-- How to raise a builtin exception
-- When do we need to implement a clean-up action after an exception
+- What is OOP (Object-Oriented Programming)
+- “first-class everything”
+- What is a class
+- What is an object and an instance
+- What is the difference between a class and an object or instance
+- What is an attribute
+- What are and how to use public, protected, and private attributes
+- What is self
+- What is a method
+- What is the special __init__ method and how to use it
+- What is Data Abstraction, Data Encapsulation, and Information Hiding
+- What is a property
+- What is the difference between an attribute and a property in Python
+- What is the Pythonic way to write getters and setters in Python
+- How to dynamically create arbitrary new attributes for existing instances of a class
+- How to bind attributes to object and classes
+- What is the __dict__ of a class and/or instance of a class and what does it contain
+- How does Python find the attributes of an object or class
+- How to use the getattr function
 
 ## Copyright - Plagiarism :no_entry_sign: :page_facing_up:
 - You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
@@ -29,3 +41,8 @@
 - Your code should use the pycodestyle (version 2.8.*)
 - All your files must be executable
 - The length of your files will be tested using wc
+- All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
+- All your classes should have a documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
+- All your functions (inside and outside a class) should have a documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'` and `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`)
+- A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class, or method (the length of it will be verified)
+
