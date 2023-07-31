@@ -10,7 +10,7 @@
 - What are indexing and slicing in Python
 - What is the official Python coding style and how to check your code with `PEP 8`
 
-# [Pythin-if, else, while](https://github.com/RyuzakiiL23/alx-higher_level_programming/tree/master/0x01-python-if_else_loops_functions) 🔢 ➰
+# [Python-if, else, while](https://github.com/RyuzakiiL23/alx-higher_level_programming/tree/master/0x01-python-if_else_loops_functions) 🔢 ➰
 
 ## Learning Objectives ✅
 
@@ -31,7 +31,7 @@
 - What’s a traceback
 - What are the arithmetic operators and how to use them
 
-# [Pythin-import_modules](https://github.com/RyuzakiiL23/alx-higher_level_programming/tree/master/0x02-python-import_modules) :package:
+# [Python-import_modules](https://github.com/RyuzakiiL23/alx-higher_level_programming/tree/master/0x02-python-import_modules) :package:
 
 ## Learning Objectives ✅
 
