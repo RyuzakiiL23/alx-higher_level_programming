@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""  lists all states from hbtn_0e_0_usa """
+"""  Lists all cities from the database hbtn_0e_4_usa """
 import MySQLdb
 import sys
 
@@ -14,8 +14,8 @@ if __name__ == "__main__":
     )
 
     cursor = db.cursor()
-    data = sys.argv[4]
-    cursor.execute("SELECT * FROM states WHERE name LIKE %s", (data,))
+    cursor.execute("""SELECT cities.id, cities.name, states.name FROM cities
+                    JOIN states ON states.id=cities.state_id""")
     states = cursor.fetchall()
     for state in states:
         print(state)

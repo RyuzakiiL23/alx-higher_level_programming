@@ -15,9 +15,9 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     data = sys.argv[4]
-    cursor.execute("SELECT * FROM states WHERE name LIKE %s", (data,))
-    states = cursor.fetchall()
-    for state in states:
-        print(state)
+    cursor.execute("""SELECT cities.name FROM cities JOIN states ON
+                    states.id=cities.state_id WHERE states.name=%s""", (data,))
+    cities = [city[0] for city in cursor.fetchall()]
+    print(', '.join(cities))
     cursor.close()
     db.close()
