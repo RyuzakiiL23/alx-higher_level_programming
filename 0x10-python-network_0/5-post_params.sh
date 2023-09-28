@@ -1,3 +1,3 @@
 #!/bin/bash
-# script that takes in a URL, sends a request to URL displays size of the body
-curl -s "$1" | wc -c
+# script that sends a POST request to URL, and displays the body of the response
+curl -sX POST -d "email=test@gmail.com&subject=I will always be here for PLD" "$1"
