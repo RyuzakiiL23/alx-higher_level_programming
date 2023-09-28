@@ -2,6 +2,7 @@
 """ Def function find_peak """
 
 def find_peak(list_of_integers):
+    """Finds a peak in list_of_integers"""
     if len(list_of_integers) == 0:
         return None
 
