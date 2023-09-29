@@ -7,6 +7,6 @@ import sys
 if __name__ == "__main__":
     r = requests.get(sys.argv[1])
     if r.status_code == 200:
-        print(res.text)
+        print(r.text)
     else:
         print('Error code:', r.status_code)
