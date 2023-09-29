@@ -5,8 +5,8 @@ the body of the response (decoded in utf-8)."""
 import requests
 import sys
 if __name__ == "__main__":
-    try:
-        with requests.get(sys.argv[1]) as res:
-            print(res.text)
-    except requests.exceptions.RequestException as err:
+    r = requests.get(sys.argv[1])
+    if r == 200:
+        print(res.text)
+    else:
         print('Error code:', err.text)
