@@ -9,13 +9,8 @@ request.get(newUrl,
     if (error) {
       console.error(error);
     } else {
-      try {
-        const filmData = JSON.parse(body);
-        const numFilms = filmData.films;
-        console.log(numFilms.length.toString());
-      } catch (parseError) {
-        console.error('An error occurred while parsing the JSON response:',
-          parseError);
-      }
+			const filmData = JSON.parse(body);
+			const numFilms = filmData.films;
+			console.log(numFilms.length);
     }
   });
