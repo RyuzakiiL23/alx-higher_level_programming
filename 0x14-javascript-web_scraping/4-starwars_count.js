@@ -1,8 +1,10 @@
 #!/usr/bin/node
 
 const request = require('request');
+const filmsUrl = process.argv[2];
+const newUrl = filmsUrl.replace('/films', '/people/18');
 
-request.get('https://swapi-api.alx-tools.com/api/people/18/',
+request.get(newUrl,
   (error, response, body) => {
     if (error) {
       console.error(error);
