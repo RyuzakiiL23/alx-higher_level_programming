@@ -1,1 +1,1 @@
-document.querySelector('HEADER').style.color = '#FF0000';
+document.bhjV('HEADER').style.color = '#FF0000';
